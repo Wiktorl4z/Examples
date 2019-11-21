@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'DITest'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.17.0'
+    testCompile "org.mockito:mockito-core:2.+"
+}
+
+test {
+    useJUnitPlatform()
+}
